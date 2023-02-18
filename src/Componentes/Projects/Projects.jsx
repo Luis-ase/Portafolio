@@ -1,19 +1,21 @@
 import NavBar from "../NavBar/NavBar"
 import styles from "../Styles/Styles"
 import ImageDefault from "../../public/Project.jpg"
+import StarWars from "../../public/Starwars.jpg";
+import Countries from "../../public/Countries.jpg";
 
 let Projectos = [
   {
     titulo: "App Countries",
     linkGit: "https://github.com/Luis-ase/PI-Countries",
     linkDeploy: "",
-    image: ImageDefault
+    image: Countries
   },
   {
-    titulo: "Prueba tecnica",
-    linkGit: "https://github.com/Luis-ase/Prueba-Tecnica",
+    titulo: "Star Wars VS",
+    linkGit: "https://github.com/Luis-ase/Star-wars-VS",
     linkDeploy: "",
-    image: ImageDefault
+    image: StarWars
   },
   {
     titulo: "Prueba tecnica",
@@ -59,7 +61,8 @@ export default function Project() {
           return (
             <>
             <div className={`${styles.BoxBorder} ${styles.padding} py-10 sm:py-1 my-5 sm:my-1 border-t-0 border-l-none`}>
-            <img src={ImageDefault} alt="" className="rounded-md w-auto" />
+            <img src={projectos.image} alt="" className="rounded-md w-auto" />
+                <h3 className="text-xl text-center text-white">{projectos.titulo}</h3>
             <div className={`${styles.flexCenter}`}>
               <div>
                     <a href="" target={"_blank"}>
@@ -69,7 +72,7 @@ export default function Project() {
                     </a>
               </div>
               <div>
-                    <a href="" target={"_blank"}>
+                    <a href={`${projectos.linkGit}`} target={"_blank"}>
                       <button className={`${styles.flexCenter} bg-sky-800 rounded-xl border-none  w-2 px-6 py-3 m-4 `}>
                         Code
                       </button>
